@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Demo - Khajalaya</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .demo-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .demo-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .breakpoint-demo {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .breakpoint-item {
+            padding: 1rem;
+            background: var(--light-gray);
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+        
+        .device-mockup {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            background: #333;
+            border-radius: 20px;
+            padding: 20px;
+            position: relative;
+        }
+        
+        .device-screen {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            min-height: 200px;
+        }
+        
+        .responsive-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        .grid-item {
+            background: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            text-align: center;
+        }
+        
+        @media (min-width: 768px) {
+            .breakpoint-demo {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .responsive-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (min-width: 992px) {
+            .breakpoint-demo {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .responsive-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        @media (min-width: 1200px) {
+            .responsive-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="d-flex justify-between align-center">
+                <a href="index.html" class="navbar-brand">
+                    <img src="images/appicon.png" alt="Khajalaya" style="height: 32px; width: 32px; margin-right: 8px; vertical-align: middle;"> Khajalaya
+                </a>
+                <a href="index.html" class="btn btn-primary btn-sm">Back to Home</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="demo-container" style="margin-top: 100px;">
+        <div class="section-title text-center">
+            <h1>Responsive Design Demo</h1>
+            <p>This page demonstrates the mobile-first responsive design of the Khajalaya website.</p>
+        </div>
+
+        <div class="demo-section">
+            <h2>Breakpoint System</h2>
+            <p>Our CSS uses a mobile-first approach with the following breakpoints:</p>
+            
+            <div class="breakpoint-demo">
+                <div class="breakpoint-item">
+                    <h3>Mobile</h3>
+                    <p><strong>&lt; 768px</strong></p>
+                    <p>Default styles, single column layout</p>
+                </div>
+                
+                <div class="breakpoint-item">
+                    <h3>Tablet</h3>
+                    <p><strong>768px - 991px</strong></p>
+                    <p>Two-column layouts, larger text</p>
+                </div>
+                
+                <div class="breakpoint-item">
+                    <h3>Desktop</h3>
+                    <p><strong>992px - 1199px</strong></p>
+                    <p>Three-column layouts, full navigation</p>
+                </div>
+                
+                <div class="breakpoint-item">
+                    <h3>Large Desktop</h3>
+                    <p><strong>≥ 1200px</strong></p>
+                    <p>Four-column layouts, maximum width</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Responsive Grid System</h2>
+            <p>Watch how the grid adapts to different screen sizes:</p>
+            
+            <div class="responsive-grid">
+                <div class="grid-item">Item 1</div>
+                <div class="grid-item">Item 2</div>
+                <div class="grid-item">Item 3</div>
+                <div class="grid-item">Item 4</div>
+                <div class="grid-item">Item 5</div>
+                <div class="grid-item">Item 6</div>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Typography Scale</h2>
+            <p>Responsive typography that scales with screen size:</p>
+            
+            <div style="text-align: center;">
+                <h1>Heading 1 - Responsive</h1>
+                <h2>Heading 2 - Responsive</h2>
+                <h3>Heading 3 - Responsive</h3>
+                <h4>Heading 4 - Responsive</h4>
+                <h5>Heading 5 - Responsive</h5>
+                <h6>Heading 6 - Responsive</h6>
+                <p>This is a paragraph with responsive text that adapts to different screen sizes for optimal readability.</p>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Interactive Elements</h2>
+            <p>Buttons and interactive elements that work well on all devices:</p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
+                <button class="btn btn-primary">Primary Button</button>
+                <button class="btn btn-secondary">Secondary Button</button>
+                <button class="btn btn-outline">Outline Button</button>
+                <button class="btn btn-primary btn-lg">Large Button</button>
+                <button class="btn btn-primary btn-sm">Small Button</button>
+            </div>
+        </div>
+
+        <div class="demo-section">
+            <h2>Card Components</h2>
+            <p>Responsive cards that adapt to different screen sizes:</p>
+            
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Feature Card</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>This is a responsive card component that adapts to different screen sizes. It uses our mobile-first grid system.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-sm">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Another Card</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>Cards automatically stack on mobile devices and arrange in columns on larger screens.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-secondary btn-sm">Get Started</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3>Third Card</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>The grid system ensures consistent spacing and alignment across all devices.</p>
+                        </div>
+                        <div class="card-footer">
+                            <button class="btn btn-outline btn-sm">Contact Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="demo-section text-center">
+            <h2>Test Instructions</h2>
+            <p>To test the responsive design:</p>
+            <ol style="text-align: left; max-width: 600px; margin: 0 auto;">
+                <li>Open this page in your browser</li>
+                <li>Use browser developer tools (F12)</li>
+                <li>Toggle device toolbar (Ctrl+Shift+M)</li>
+                <li>Test different device sizes</li>
+                <li>Observe how the layout adapts</li>
+                <li>Test on actual mobile devices</li>
+            </ol>
+            
+            <div style="margin-top: 2rem;">
+                <a href="index.html" class="btn btn-primary btn-lg">
+                    <i class="fas fa-home"></i> Back to Main Website
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
