@@ -147,6 +147,74 @@
                     <li><strong>Opt-out:</strong> Unsubscribe from marketing communications</li>
                 </ul>
                 <p>To exercise these rights, please contact us using the information provided in the Contact section.</p>
+                
+                <div class="highlight" style="margin-top: 2rem;">
+                    <h3>🗑️ Account Deletion Request</h3>
+                    <p>If you wish to delete your account and all associated data, please fill out the form below. We will process your request within 30 days.</p>
+                    
+                    <form id="accountDeletionForm" class="deletion-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="e18d679c-00a1-42de-a9be-4a04aee6a0dc">
+                        <input type="hidden" name="subject" value="Account Deletion Request - Khajalaya">
+                        <input type="hidden" name="from_name" value="Khajalaya Privacy Policy">
+                        <input type="hidden" name="redirect" value="false">
+                        <input type="hidden" name="redirect_url" value="">
+                        <input type="checkbox" name="botcheck" id="" style="display: none;">
+                        <div class="form-group">
+                            <label for="userEmail">Email Address *</label>
+                            <input type="email" id="userEmail" name="userEmail" required 
+                                   placeholder="Enter your registered email address">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="userPhone">Phone Number</label>
+                            <input type="tel" id="userPhone" name="userPhone" 
+                                   placeholder="Enter your registered phone number">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="reason">Reason for Account Deletion</label>
+                            <select id="reason" name="reason">
+                                <option value="">Select a reason (optional)</option>
+                                <option value="privacy-concerns">Privacy concerns</option>
+                                <option value="no-longer-needed">No longer need the service</option>
+                                <option value="found-alternative">Found alternative service</option>
+                                <option value="technical-issues">Technical issues</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="additionalInfo">Additional Information</label>
+                            <textarea id="additionalInfo" name="additionalInfo" rows="3" 
+                                      placeholder="Any additional information you'd like to provide (optional)"></textarea>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="confirmDeletion" name="confirmDeletion" required>
+                                <span class="checkmark"></span>
+                                I understand that account deletion is permanent and cannot be undone. All my data will be permanently removed from Khajalaya's systems.
+                            </label>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="confirmEmail" name="confirmEmail" required>
+                                <span class="checkmark"></span>
+                                I confirm that the email address provided above is associated with my Khajalaya account.
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="deletion-submit-btn">
+                            <i class="fas fa-trash-alt"></i> Submit Deletion Request
+                        </button>
+                        
+                        <p class="form-note">
+                            <strong>Note:</strong> After submitting this form, you will receive a confirmation email at the provided address. 
+                            Please follow the instructions in the email to complete the account deletion process.
+                        </p>
+                    </form>
+                </div>
             </div>
 
             <div class="section">
